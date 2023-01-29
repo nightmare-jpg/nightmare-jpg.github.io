@@ -1,0 +1,35 @@
+.hi {
+    font-family: Helvetica;
+    }
+a {
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+h4.hi{
+    font-style: italic;
+}
+.girl{
+    height: 200px;
+}
+.home{
+    position: relative;
+    left: -110px;
+    bottom: -20px;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: black;
+    }
+    a {
+      color: whitesmoke;
+    }
+    h1{
+        color: whitesmoke;
+    }
+    h4{
+        color: whitesmoke;
+    }
+  }
+  .nyan{
+        background-color: #FFC0CB;
+  }
