@@ -1,24 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <Title>okay</Title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/me.css">
-
+    <link rel="stylesheet" href="css/nightNyan.css">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Random Tab Title</title>
+    <script>
+        const names = [
+            'Ai Hoshino',
+            'Mai Sakurajima',
+            'Mizkif',
+            'Emiru'
+        ]
+        const name = names[Math.floor(Math.random() * names.length)];
+        document.title = ('Who is ' + name);
+    </script>
 </head>
 
 <body>
-    <div>
-        <img src="images/rawr.webp">
-        <h1 class="hi">night</h1>
-        <a href="store.html">merch</a>
-        <a href="https://www.twitter.com/nightmare_jpg">twitter</a>
-        <a href="https://www.twitch.tv/nightmare_jpg">twitch</a>
-        <a href="mai.html">mai</a>
-        <a href="project.html">projects</a>
-        <h4 class="hi">©night</h4>
+    <div class="nyan">
+        <nav class="container-fluid">
+            <ul>
+                <li>
+                    <a href="./" class="contrast" onclick="event.preventDefault()">
+                        <strong>nightmare</strong>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="https://twitch.tv/nighmare_jpg" class="contrast"><strong>Twitch</strong></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/nighmare_jpg" class="contrast"><strong>Twitter</strong></a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@nighmare_jpg" class="contrast"><strong>Youtube</strong></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <details role="list" dir="rtl">
+                        <summary aria-haspopup="listbox rolse" role="link" class="contrast">Projects</summary>
+                        <ul role="listbox">
+                            <li>MimiBot</li>
+                            <li><a href="mai.html">MaiBot</a></li>
+                            <li><a href="https://img.maisakurajima.com">Image Uploader (Work in Progress)</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+    </div>
+
+
+    <main class="container">
+        <div class="center-container">
+            <img src="images/nightmareDancing.gif" alt="nightmareDancing">
+        </div>
+    </main>
 </body>
 
 </html>
