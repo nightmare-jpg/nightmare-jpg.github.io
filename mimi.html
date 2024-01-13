@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/maiCSS.css"
+    <title></title>
+    <script>
+        window.onload = function () {
+
+            const number = document.querySelector('.counting p')
+            const targetDate = new Date(2023, 10, 27)
+            function calculateDaysDifference() {
+                const currentDate = new Date();
+                const timeDifference = currentDate - targetDate;
+                const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+                return daysDifference;
+            }
+            function displayDaysDifference() {
+                const daysCounterElement = document.getElementById('daysCounter');
+                const daysDifference = calculateDaysDifference();
+                document.title = ('this bot been dead for ' + daysDifference + ' Days and Counting');
+                displayNumberWithImages(daysDifference, number)
+            }
+            displayDaysDifference();
+            setInterval(displayDaysDifference, 1000);
+
+            function displayNumberWithImages(number, container) {
+                // Convert the number to a string to iterate through its digits
+                const numberString = number.toString();
+
+                // Clear existing content in the container
+                container.innerHTML = '';
+
+                // Iterate through each digit in the number
+                for (let i = 0; i < numberString.length; i++) {
+                    const digit = numberString[i];
+
+                    // Create an image element for the digit
+                    const image = document.createElement('img');
+                    image.src = `images/catgirls/${digit}.gif`; // Adjust the path to your folder
+                    image.alt = digit;
+
+                    // Append the image to the container
+                    container.appendChild(image);
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #AA7BC3;
+        }
+        h1 {
+            color:  #d3f8e2;
+            margin: 0;
+            display: block;
+            font-size: 2em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            font-family: Roboto, sans-serif;
+        }
+        p {
+            font-family: Roboto, sans-serif;
+        }
+        .container {
+            min-height: 100vh;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: opacity 1s;
+        }
+    </style>
+</head>
+
+<body class="container text-focus-in">
+    <h1>it been </h1>
+    <div class="counting">
+        <a href="home.html"><p>
+
+        </p><a></a>
+    </div>
+    <h1>days since i updated the discord bot</h1>
+    <audio autoplay loop>
+        <source src="peepoGiggles/meow.wav" type="audio/wav"
+    </audio>
+</body>
+
+</html>
