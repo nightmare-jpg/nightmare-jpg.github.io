@@ -16,7 +16,16 @@ hgroup> :last-child {
     font-family: Arial, sans-serif; /* Specify a fallback font */
     overflow: hidden;
 }
+.nightColor {
+  background: #CF1F1F;
+  background: linear-gradient(to right, #CF1F1F 0%, #CF00BA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: bold;
+  font-family: Helvetica;
 
+}
 .nyan {
     background-position: center;
     background-size: cover;
